@@ -2,8 +2,10 @@
 import express from 'express';
 
 // importando as rotas de outro arquivo
-
 import routes from './routes';
+
+// importando o arquivo que faz a conexao com o banco de dados e carrega os models
+import './database';
 
 // isntanciando a aplicação
 class App {
