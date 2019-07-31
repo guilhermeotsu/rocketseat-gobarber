@@ -30,7 +30,7 @@ class SessionController {
                 email,
             },
             // passando o payload como parametro de sign e uma string unica, e algumas configurações do token
-            token: jwt.sign({ id }, authConfig.secre, {
+            token: jwt.sign({ id }, authConfig.secret, {
                 expiresIn: authConfig.expiresIn,
             }),
         });
