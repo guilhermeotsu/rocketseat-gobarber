@@ -1,6 +1,6 @@
 // usar a sintaxe de import só é possivel após a instalação do sucrase
 import express from 'express';
-
+import path from 'path';
 // importando as rotas de outro arquivo
 import routes from './routes';
 
@@ -21,6 +21,9 @@ class App {
     middlewares() {
         // preparar para que nossa aplicação possa receber arquivos em json
         this.server.use(express.json());
+        
+        // servir arquivos estaticos (css, html, imagens, etc)
+        this.server.use('/files', express.static(path.resolve(__dirname, '..', 'tmp', 'uploads' )))
     }
 
     routes() {

@@ -32,7 +32,7 @@ class User extends Model {
 
     // relacionando o avatar com o usuario
     static associate(models){ 
-        this.belongsTo(models.File, { foreignKey: 'avatar_id' }); // belongsTo é tipo de relacionamento que se traduz a "pertence a"
+        this.belongsTo(models.File, { foreignKey: 'avatar_id', as: 'avatar' }); // belongsTo é tipo de relacionamento que se traduz a "pertence a"
     }
 
     // fazendo validação de senha do usuario
