@@ -30,6 +30,11 @@ class User extends Model {
         return this;
     }
 
+    // relacionando o avatar com o usuario
+    static associate(models){ 
+        this.belongsTo(models.File, { foreignKey: 'avatar_id' }); // belongsTo é tipo de relacionamento que se traduz a "pertence a"
+    }
+
     // fazendo validação de senha do usuario
     checkPassword(password) {
         return bcrypt.compare(password, this.password_hash);
