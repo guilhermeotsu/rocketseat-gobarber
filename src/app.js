@@ -23,7 +23,7 @@ class App {
         this.server.use(express.json());
         
         // servir arquivos estaticos (css, html, imagens, etc)
-        this.server.use('/files', express.static(path.resolve(__dirname, '..', 'tmp', 'uploads' )))
+        this.server.use('/files', express.static(path.resolve(__dirname, '..', 'tmp', 'uploads')))
     }
 
     routes() {

@@ -3,10 +3,11 @@ import Sequelize from 'sequelize'; // responsavel por faze ra conexao com o banc
 
 import User from '../app/models/User';
 import File from '../app/models/File';
+import Appointment from '../app/models/Appointment';
 
 import databaseConfig from '../config/database';
 
-const models = [User, File];
+const models = [User, File, Appointment];
 
 class DataBase {
     constructor() {
