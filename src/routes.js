@@ -1,7 +1,7 @@
 // roteamento do express
-import { Router } from 'express'; 
+import { Router } from 'express';
 import multer from 'multer';
-import multerConfig from './config/multer'
+import multerConfig from './config/multer';
 
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
@@ -27,6 +27,7 @@ routes.post('/files', upload.single('file'), FileController.store);
 routes.get('/providers', ProviderController.index);
 
 routes.post('/appointments', AppointmentController.store);
+routes.get('/appointments', AppointmentController.index);
 
 // exportando as rotas
 export default routes;
