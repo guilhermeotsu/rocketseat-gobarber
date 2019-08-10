@@ -1,6 +1,6 @@
-import multer from 'multer';
 import crypto from 'crypto';
 import { extname, resolve } from 'path';
+import multer from 'multer';
 
 export default {
     // storage é como o multer vai guardar os arquivos de imagem, diskstorage permite o armazenamento dentro dos arquivos da aplicação

@@ -18,8 +18,11 @@ class Appointment extends Model {
     // se existem dois relacionamentos na mesma tabela é obrigatorio o apelido
     static associate(models) {
         this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
-        this.belongsTo(models.User, { foreignKey: 'provider_id', as: 'provider' });
+        this.belongsTo(models.User, {
+            foreignKey: 'provider_id',
+            as: 'provider',
+        });
     }
 }
 
-export default File;
+export default Appointment;
