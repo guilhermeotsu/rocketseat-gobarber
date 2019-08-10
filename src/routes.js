@@ -8,6 +8,8 @@ import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
 import AppointmentController from './app/controllers/AppointmentController';
+import ScheduleController from './app/controllers/ScheduleController';
+
 
 import authMiddleware from './app/middlewares/auth'; // middleware que vai fazer autenticação do jwt
 
@@ -28,6 +30,8 @@ routes.get('/providers', ProviderController.index);
 
 routes.post('/appointments', AppointmentController.store);
 routes.get('/appointments', AppointmentController.index);
+
+routes.get('/schedules', ScheduleController.index);
 
 // exportando as rotas
 export default routes;
