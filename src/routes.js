@@ -34,6 +34,7 @@ routes.get('/appointments', AppointmentController.index);
 routes.get('/schedules', ScheduleController.index);
 
 routes.get('/notifications', NotificationController.index);
+routes.put('/notifications/:id', NotificationController.update);
 
 // exportando as rotas
 export default routes;
