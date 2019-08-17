@@ -1,3 +1,4 @@
+import 'dotenv/config';
 /**
  * Esse arquivo foi criado porque a fila não vai ser executada junta com a aplicação
  */
