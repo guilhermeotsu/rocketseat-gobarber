@@ -1,3 +1,1 @@
-# rocketseat-gobarber-api 
-
-api feita em node.js/express
+# API desenvolvida durante o bootcamp da Rocketseat
